@@ -14,6 +14,21 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #c92b4d;
+        }
+
         a {
             color: #E3496B;
             text-decoration: none;
@@ -43,20 +58,35 @@
         i:hover {
             color: #E3496B;
         }
+
+        .nav_top a
+        {
+            color: #E3496B;
+            transition: 0.5s;
+        }
+
+        .nav_top a:hover
+        {
+            color: #E3496B;
+            border-bottom: 1px solid #E3496B;
+        }
     </style>
 
 </head>
 
 <body style="background-color: #101018;">
-    <div class="header_body mb-5" style="background-image: url('./images/backgrounds/back1.jpg'); height: 700px;">
+    <div class="header_body mb-5"
+        style="background-image: url('./images/backgrounds/back4.jfif'); height: 900px; background-size: cover;">
         <header class="d-flex flex-wrap justify-content-center mb-4 p-2 align-items-center"
-            style="background-color: #0e000c;">
+            style="background-color: #ffffff00;">
             <img class="mx-5 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
                 src="./images/logo/wyzo.png" alt="" style="width: 80px; height: auto;">
 
-            <ul class="nav nav-pills mx-5 fw-light my-3" style="color: white;">
-                <li class="nav-item align-middle"><a href="index.html" class="text-decoration-none mx-3 fs-5">Home</a></li>
-                <li class="nav-item align-middle"><a href="#projects" class="text-decoration-none mx-3 fs-5">Projects</a>
+            <ul class="nav_top nav nav-pills mx-5 my-3" style="color: white;">
+                <li class="nav-item align-middle"><a href="index.html" class="text-decoration-none mx-3 fs-5">Home</a>
+                </li>
+                <li class="nav-item align-middle"><a href="#projects"
+                        class="text-decoration-none mx-3 fs-5">Projects</a>
                 </li>
                 <li class="nav-item align-middle"><a href="#aboutme" class="text-decoration-none mx-3 fs-5">About me</a>
                 </li>
@@ -68,9 +98,8 @@
             <p class="fw-light text-white fs-4">Junior Web designer</p>
             <hr style="height: 10px; color: #eb2323; width: 200px; opacity: 100;" />
         </div>
-        <div class="container text-center p-2 shadow"
-            style="width: 400px; margin-top: 150px; background-color: #0e000c; border-radius: 8px;">
-            <h2>Information</h2>
+        <div class="arrow container text-center p-2">
+            <a href="#aboutme"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
     </header>
@@ -95,7 +124,9 @@
     <div id="projects" class="container text-center">
         <h2>My projects</h2>
         <p class="text-white fw-light fs-3">Web design</p>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="a/9MzlvUh" data-context="false" ><a href="//imgur.com/a/9MzlvUh"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        <blockquote class="imgur-embed-pub" lang="en" data-id="a/9MzlvUh" data-context="false"><a
+                href="//imgur.com/a/9MzlvUh"></a></blockquote>
+        <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
     </div>
 
     <div class="contact p-5" style="background-color: #202030;">
