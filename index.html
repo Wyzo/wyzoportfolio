@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/52c6714f28.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/59a9acd0a0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" href="./images/logo/wyzo.png">
     <script src="./css/bootstrap.bundle.min.js"></script>
+    <script src="./js/popper.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
     <style>
@@ -52,10 +53,12 @@
             color: white;
             font-size: 30px;
             margin-right: 20px;
+            padding: 10px;
             transition: 0.3s;
         }
 
         i:hover {
+            border-bottom: 1px solid #E3496B;
             color: #E3496B;
         }
 
@@ -70,16 +73,37 @@
             color: #E3496B;
             border-bottom: 1px solid #E3496B;
         }
+        
+        .wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
     </style>
 
 </head>
 
 <body style="background-color: #101018;">
     <div class="header_body mb-5"
-        style="background-image: url('./images/backgrounds/back4.jfif'); height: 900px; background-size: cover;">
-        <header class="d-flex flex-wrap justify-content-center mb-4 p-2 align-items-center"
+        style="background-image: url('images/backgrounds/background_top.jpg'); height: 100vh; background-size: cover;">
+        <header class=""
             style="background-color: #ffffff00;">
-            <img class="mx-5 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+            <div class="container d-flex flex-wrap justify-content-center mb-4 p-2 align-items-center">
+                <img class="mx-5 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
                 src="./images/logo/wyzo.png" alt="" style="width: 80px; height: auto;">
 
             <ul class="nav_top nav nav-pills mx-5 my-3" style="color: white;">
@@ -91,11 +115,12 @@
                 <li class="nav-item align-middle"><a href="#aboutme" class="text-decoration-none mx-3 fs-5">About me</a>
                 </li>
             </ul>
+            </div>
         </header>
         <div class="container" style="width: 700px; padding-top: 200px;">
-            <p class="text-white fw-light fs-3">Hello, my name is</p>
-            <h2 class="fw-bold text-white" style="font-size: 50px;">Francisco Duarte = "wyzo";</h2>
-            <p class="fw-light text-white fs-4">Junior Web designer</p>
+            <p class="text-white fw-light fs-2">Hello, welcome <span class="wave">👋</span></p>
+            <h2 class="fw-bold text-white" style="font-size: 50px;">$name = "Francisco Duarte";</h2>
+            <p class="fw-light text-white fs-4">Junior full stack developer</p>
             <hr style="height: 10px; color: #eb2323; width: 200px; opacity: 100;" />
         </div>
         <div class="arrow container text-center p-2">
@@ -103,76 +128,89 @@
         </div>
     </div>
     </header>
-    <div id="aboutme" class="aboutme" style="background-color: #202030;">
-        <div class="container p-5">
+    <div class="container text-center">
+        <h1 class="text-white">I have experience with</h1>
+        <div class="container my-5 text-center">
+            <i class="fa-brands fa-html5 fa-6x shadow mx-5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom"></i>
+            <i class="fa-brands fa-css3-alt fa-6x shadow mx-5"></i>
+            <i class="fa-brands fa-java fa-6x shadow mx-5"></i>
+            <i class="fa-brands fa-js fa-6x shadow mx-5"></i>
+            <i class="fa-brands fa-php fa-6x shadow mx-5"></i>
+            <p class="text-white my-5">And more...</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="text-white fs-1">A few of my jobs</h1>
+        <div class="row my-5">
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/foxstand.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Fox stand</figcaption>
+                  </figure>
+            </div>
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/maosnamassa.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Mãos na massa</figcaption>
+                  </figure>
+            </div>
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/logist.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Logist.</figcaption>
+                  </figure>
+            </div>
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/tapgear.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">TAPGEAR</figcaption>
+                  </figure>
+            </div>
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/prevstock.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Prevstock</figcaption>
+                  </figure>
+            </div>
+            <div class="col">
+                <figure class="figure">
+                    <img src="images/projetos/mountain.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Mountain clothes</figcaption>
+                  </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <h1 class="text-white">What do people say about me?</h1>
+        <div class="row text-center my-2">
+            <div class="col my-2">
+                <img src="./images/pfp/pfp1.png" style="width: 20vh; height: 20vh; border-radius: 50%;" alt="">
+                <p id="teste_1" class="text-white my-2" style="background-color: #1b1b26; padding: 10px; border-radius: 10px;" ><span class="text-warning">Quote</span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel magna elit. Praesent ullamcorper, ex at porttitor mattis, ipsum enim mollis turpis, eget congue quam enim in lacus. Maecenas ornare justo eu varius vulputate."</p>
+            </div>
+            <div class="col my-2">
+                <img src="./images/pfp/pfp2.jpg" style="width: 20vh; height: 20vh; border-radius: 50%;" alt="">
+                <p id="teste_1" class="text-white my-2" style="background-color: #1b1b26; padding: 10px; border-radius: 10px;" ><span class="text-warning">Quote</span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel magna elit. Praesent ullamcorper, ex at porttitor mattis, ipsum enim mollis turpis, eget congue quam enim in lacus. Maecenas ornare justo eu varius vulputate."</p>
+            </div>
+            <div class="col my-2">
+                <img src="./images/pfp/pfp3.jpg" style="width: 20vh; height: 20vh; border-radius: 50%;" alt="">
+                <p id="teste_1" class="text-white my-2" style="background-color: #1b1b26; padding: 10px; border-radius: 10px;" ><span class="text-warning">Quote</span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel magna elit. Praesent ullamcorper, ex at porttitor mattis, ipsum enim mollis turpis, eget congue quam enim in lacus. Maecenas ornare justo eu varius vulputate."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="background-color: #08080d;">
+        <div class="container p-2">
             <div class="row">
-                <div class="col my-2">
-                    <img src="images/logo/wyzo.png" width="300px" alt="">
-                </div>
-                <div class="col text-white my-2 align-items-center">
-                    <div class="container text-center fs-2">
-                        <h2>About me</h2>
-                    </div>
-                    <p class="fs-3 text-white">🤘 Hello my name is Francisco Duarte also known as Wyzo. I have been
-                        programming for 2 years and
-                        have a lot of knowledge in the area of ​​software development and web design.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="projects" class="container text-center">
-        <h2>My projects</h2>
-        <p class="text-white fw-light fs-3">Web design</p>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="a/9MzlvUh" data-context="false"><a
-                href="//imgur.com/a/9MzlvUh"></a></blockquote>
-        <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-    </div>
-
-    <div class="contact p-5" style="background-color: #202030;">
-        <div class="container text-center p-2 shadow"
-            style="width: 400px; background-color: #0e000c; border-radius: 8px;">
-            <h2>Contact</h2>
-        </div>
-        <div class="container my-5 p-5 shadow" style="background-color: #0e000c; border-radius: 10px;">
-            <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="E-mail" aria-label="First name">
+                    <img src="images/logo/wyzo.png" alt="" style="width: 50px; height: 50px">
+                    <p class="text-secondary">@ All rights reserved to wyzo 2022</p>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" aria-label="Last name">
+                <div class="col text-end">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                </div>
-            </div>
-            <div class="mb-3 my-4">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <button class="btn btn-danger">Send</button>
-        </div>
-    </div>
-
-    <div class="footer_bottom" style="background-color: #0e000b;">
-        <div class="container">
-            <footer class="py-5 fs-5 text-center">
-                <h2>Designed with ❤️ by wyzo</h2>
-            </footer>
-        </div>
-    </div>
-    <div class="a" style="background-color: #0c0011;">
-        <div class="container">
-            <div class="d-flex justify-content-between py-4 align-items-center">
-                <div class="container text-decoration-none">
-                    <a href="https://twitter.com/wyzoag"><i class="fab fa-twitter"></i></a>
-                    <a href="https://faceboo.com/"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/francisco.pduarte"><i class="fab fa-instagram"></i></a>
-                    <a href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://github.com/Wyzo"><i class="fab fa-github"></i></a>
-                </div>
-                <ul class="d-flex">
-                    <img src="images/logo/wyzo.png" alt="" style="height: 40px; width: auto; margin-left: 10px;">
-                </ul>
             </div>
         </div>
     </div>
