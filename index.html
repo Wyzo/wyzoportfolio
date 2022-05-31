@@ -6,95 +6,12 @@
     <title>Wyzo | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/59a9acd0a0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" href="./images/logo/wyzo.png">
-    <script src="./css/bootstrap.bundle.min.js"></script>
-    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-
-    <style>
-        /* width */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #ffffff;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #c92b4d;
-        }
-
-        a {
-            color: #E3496B;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #E3496B;
-        }
-
-        h2 {
-            color: white;
-            transition: 0.3s;
-        }
-
-        h2:hover {
-            color: #E3496B;
-        }
-
-        i {
-            color: white;
-            font-size: 30px;
-            margin-right: 20px;
-            padding: 10px;
-            transition: 0.3s;
-        }
-
-        i:hover {
-            border-bottom: 1px solid #E3496B;
-            color: #E3496B;
-        }
-
-        .nav_top a
-        {
-            color: #E3496B;
-            transition: 0.5s;
-        }
-
-        .nav_top a:hover
-        {
-            color: #E3496B;
-            border-bottom: 1px solid #E3496B;
-        }
-        
-        .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
-}
-
-    </style>
-
 </head>
 
 <body style="background-color: #101018;">
@@ -117,26 +34,64 @@
             </ul>
             </div>
         </header>
-        <div class="container" style="width: 700px; padding-top: 200px;">
-            <p class="text-white fw-light fs-2">Hello, welcome <span class="wave">👋</span></p>
+        <div class="container" style="width: 700px; padding-top: 150px;">
+            <div class="typewriter">
+                <p class="text-white fw-light fs-2">Hello, welcome <span class="wave">👋</span></p>
+            </div>
             <h2 class="fw-bold text-white" style="font-size: 50px;">$name = "Francisco Duarte";</h2>
             <p class="fw-light text-white fs-4">Junior full stack developer</p>
+            
             <hr style="height: 10px; color: #eb2323; width: 200px; opacity: 100;" />
         </div>
         <div class="arrow container text-center p-2">
-            <a href="#aboutme"><i class="fas fa-chevron-down"></i></a>
+            <a href="#myexperience"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
     </header>
-    <div class="container text-center">
-        <h1 class="text-white">I have experience with</h1>
+    <div class="container text-center" id="myexperience">
+        <h1 class="text-white fw-light">I HAVE <span class="fw-bold text-white">EXPERIENCE</span> WITH <span class="down_up">👇</span></h1>
         <div class="container my-5 text-center">
             <i class="fa-brands fa-html5 fa-6x shadow mx-5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom"></i>
             <i class="fa-brands fa-css3-alt fa-6x shadow mx-5"></i>
             <i class="fa-brands fa-java fa-6x shadow mx-5"></i>
             <i class="fa-brands fa-js fa-6x shadow mx-5"></i>
             <i class="fa-brands fa-php fa-6x shadow mx-5"></i>
+            <i class="fa-solid fa-database fa-6x shadow mx-5"></i>
             <p class="text-white my-5">And more...</p>
+        </div>
+    </div>
+
+    <div class="aboutme" style="background-color:#13131b">
+        <div class="container">
+            <h1 class="text-white fw-light">What can I <span class="fw-bold">do?</span></h1>
+        </div>
+        <div class="container">
+            <h1 class="text-white fs-4">Mobile developement 📱</h1>
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img src="./images/projetos/enovo_chat.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" loading="lazy">
+                  <span class="text-secondary fw-light fs-6">ENOVO chat</span>
+                </div>
+                <div class="col-lg-6">
+                  <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Fresh and inovate mobile apps</h1>
+                  <p class="lead text-white fw-light fs-2">Quickly design and customize to the client's taste and desires both for IOS <span><i class="fa-brands fa-apple" id="teste_1"></i></span> and Android <span><i class="fa-brands fa-android" id="teste_1"></i></span> using the latest technologies.</p>
+                </div>
+              </div>
+        </div>
+    
+    
+        <div class="container">
+            <h1 class="text-white fs-4">Web developement 🌐</h1>
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Modern and creative web developement</h1>
+                    <p class="lead text-white fw-light fs-2">Keep track of the newest technologies with a fresh and modern web plataform. I can develop any platform with a modern UIX design.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./images/projetos/tapgear.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" loading="lazy">
+                    <span class="text-secondary fw-light fs-6">TAPGEAR platform</span>
+                </div>
+              </div>
         </div>
     </div>
     <div class="container">
@@ -152,12 +107,6 @@
                 <figure class="figure">
                     <img src="images/projetos/maosnamassa.png" class="figure-img img-fluid rounded" alt="...">
                     <figcaption class="figure-caption text-end">Mãos na massa</figcaption>
-                  </figure>
-            </div>
-            <div class="col">
-                <figure class="figure">
-                    <img src="images/projetos/logist.png" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption text-end">Logist.</figcaption>
                   </figure>
             </div>
             <div class="col">
