@@ -110,6 +110,11 @@ i:hover {
     color: #E3496B;
 }
 
+#projeto:hover
+{
+    box-shadow: 5px 10px #ff0000;
+}
+
 .nav_top a
 {
     color: #E3496B;
